@@ -2,6 +2,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { loginProf } from '../../Redux/actions/auth';
+import AnimatedShapes from "../AnimatedShapes";
+import "./Logcss.css"
 
 const ProfLog = () => {
     const history = useHistory();
@@ -24,22 +26,28 @@ const ProfLog = () => {
       );
     };
     return (
-      <div>
-        <h1>LOGIN PROF</h1>
-        <form onSubmit={submitLogin}>
-          <h2>Login</h2>
-          <input
-            type="email"
-            placeholder="Email"
-            className="input"
-            name="email"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="input"
-            name="password"
-          />
+      <div className="form">
+        <AnimatedShapes />
+        <form onSubmit={submitLogin} className="task">
+          <h1 className="loginProf">LOGIN PROF</h1>
+          <div className="input-container">
+            <input
+              type="email"
+              placeholder="Email"
+              className="input"
+              name="email"
+            />
+            <div className="bar"></div>
+          </div>
+          <div className="input-container">
+            <input
+              type="password"
+              placeholder="Password"
+              className="input"
+              name="password"
+            />
+            <div className="bar"></div>
+          </div>
           <a href="/" className="link">
             Forgot your password?
           </a>

@@ -24,7 +24,7 @@ function App() {
   const token = localStorage.getItem("token");
   return (
     <div className="App">
-      <h1>LYCEE </h1>
+      {/* <h1>LYCEE </h1>
       {token ? (
         <button
           className="Regl"
@@ -37,7 +37,7 @@ function App() {
         </button>
       ) : (
         <button>login</button>
-      )}
+      )} */}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/parentlogin" component={ParentLog} />
@@ -52,6 +52,7 @@ function App() {
         <PrivateRoute exact path="/Registre/:classe" component={RegistreClass}/>
         <PrivateRoute exact path="/parent/Registre" component={EleveRegistre} />
         <PrivateRoute exact path="/parent/remarque" component={Remarque} />
+
 
       </Switch>
     </div>

@@ -27,20 +27,22 @@ const ParentLog = () => {
     return (
       <div>
         <h1>LOGIN PARENT</h1>
-        <form  onSubmit={submitLogin}>
-          <h2 >Login</h2>
+        <form onSubmit={submitLogin}>
+          <h2>Login</h2>
           <input
             type="text"
             placeholder="identifiant"
             className="input"
             name="identifiant"
           />
+          <label>Email</label>
           <input
             type="password"
             placeholder="Password"
             className="input"
             name="password"
           />
+          <label>Password</label>
           <a href="/" className="link">
             Forgot your password?
           </a>
